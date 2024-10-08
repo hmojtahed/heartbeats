@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Time Domain HRV Parameters Deviation</title>
+      <style>
+         table {
+         width: 100%;
+         border-collapse: collapse;
+         }
+         th, td {
+         border: 1px solid black;
+         padding: 8px;
+         text-align: center;
+         }
+         th {
+         background-color: #f2f2f2;
+         }
+         caption {
+         font-weight: bold;
+         font-size: 1.2em;
+         }
+      </style>
+   </head>
+   <body>
+      <table border="1" cellpadding="5" cellspacing="0">
+         <caption>
+            TD HRV Parameters Deviation from the GT Estimated from the Noisy and Reconstructed series (The values are in percentage deviation except for the RR50 and PRR50 that is in Mean Absolute Deviation)
+         </caption>
+         <thead>
+            <tr>
+               <th rowspan="2">P</th>
+               <th rowspan="2">D</th>
+               <th rowspan="2">Noisy/Reconstructed</th>
+               <th colspan="11">Time domain</th>
+            </tr>
+            <tr>
+               <th>RMSSD</th>
+               <th>MeanRR</th>
+               <th>SDRR</th>
+               <th>MaxRR</th>
+               <th>MinRR</th>
+               <th>MeanHR</th>
+               <th>SDHR</th>
+               <th>MinHR</th>
+               <th>MaxHR</th>
+               <th>RR50</th>
+               <th>PRR50</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td rowspan="35">10%</td>
+               <td rowspan="8">1</td>
+               <td>Noisy (σ = 1)</td>
+               <td>1.91 &times; 10<sup>3</sup></td>
+               <td>2.18</td>
+               <td>567.09</td>
+               <td>268.46</td>
+               <td>100.00</td>
+               <td>2.11</td>
+               <td>1.87 &times; 10<sup>8</sup></td>
+               <td>71.63</td>
+               <td>5.95 &times; 10<sup>7</sup></td>
+               <td>45.36</td>
+               <td>6.42</td>
+            </tr>
+            <tr>
+               <td rowspan="1">CSI</td>
+               <td>18.58</td>
+               <td>0.15</td>
+               <td>11.10</td>
+               <td>7.59</td>
+               <td>11.09</td>
+               <td>0.15</td>
+               <td>34.86</td>
+               <td>27.96</td>
+               <td>34.25</td>
+               <td>6.46</td>
+               <td>0.96</td>
+            </tr>
+            <tr>
+               <td rowspan="1">GP (Linear)</td>
+               <td>468.64</td>
+               <td>3.19</td>
+               <td>189.30</td>
+               <td>10.78</td>
+               <td>91.57</td>
+               <td>3.30</td>
+               <td>2.23 &times; 10<sup>3</sup></td>
+               <td>9.10</td>
+               <td>1.41 &times; 10<sup>3</sup></td>
+               <td>24.55</td>
+               <td>3.45</td>
+            </tr>
+            <tr>
+               <td rowspan="1">GP (Periodic)</td>
+               <td>8.56</td>
+               <td>0.08</td>
+               <td>4.30</td>
+               <td><b>0.13</b></td>
+               <td><b>0.11</b></td>
+               <td>0.08</td>
+               <td>4.31</td>
+               <td><b>0.14</b></td>
+               <td>0.11</td>
+               <td>4.42</td>
+               <td>0.66</td>
+            </tr>
+            <tr>
+               <td rowspan="1">GP (Brownian)</td>
+               <td>3.75</td>
+               <td>0.05</td>
+               <td>2.08</td>
+               <td><b>0.13</b></td>
+               <td><b>0.11</b></td>
+               <td>0.05</td>
+               <td>2.06</td>
+               <td><b>0.14</b></td>
+               <td>0.11</td>
+               <td>1.88</td>
+               <td>0.29</td>
+            </tr>
+            <tr>
+               <td>GP (Exponential)</td>
+               <td>4.96</td>
+               <td><b>0.04</b></td>
+               <td>1.15</td>
+               <td><b>0.13</b></td>
+               <td><b>0.11</b></td>
+               <td><b>0.04</b></td>
+               <td>1.14</td>
+               <td><b>0.14</b></td>
+               <td>0.11</td>
+               <td>2.54</td>
+               <td>0.40</td>
+            </tr>
+            <tr>
+               <td>GP (Matern 3/2 / 5/2)</td>
+               <td>3.80 / 4.04</td>
+               <td><b>0.04 / 0.04</b></td>
+               <td><b>1.03</b> / 1.08</td>
+               <td>0.18 / 0.14</td>
+               <td>0.14 / 0.13</td>
+               <td><b>0.04 / 0.04</b></td>
+               <td><b>0.99</b> / 1.05</td>
+               <td>0.18 / <b>0.14</b></td>
+               <td>0.14 / 0.13</td>
+               <td>1.97 / 1.92</td>
+               <td>0.31 / 0.30</td>
+            </tr>
+            <tr>
+               <td>GP (RBF / RQ)</td>
+               <td><b>3.05</b> / 4.69</td>
+               <td>0.05 / <b>0.04</b></td>
+               <td>1.16 / 1.17</td>
+               <td>0.14 / 0.14</td>
+               <td>0.19 / <b>0.11</b></td>
+               <td>0.05 / <b>0.04</b></td>
+               <td>1.14 / 1.16</td>
+               <td>0.15 / <b>0.14</b></td>
+               <td>0.20 / <b>0.10</b></td>
+               <td><b>1.58</b> / 2.38</td>
+               <td><b>0.25</b> / 0.37</td>
+            </tr>
+            <!-- 3 -->
+            <tr style="background: #ffffff;">
+               <td colspan="13"></td>
+            </tr>
+            <tr>
+               <td rowspan="8">3</td>
+               <td>Noisy (&#963; =1)</td>
+               <td>1.93 &times; 10<sup>3</sup></td>
+               <td>2.27</td>
+               <td>577.14</td>
+               <td>272.40</td>
+               <td>100.00</td>
+               <td>2.20</td>
+               <td>1.88 &times; 10<sup>8</sup></td>
+               <td>71.88</td>
+               <td>5.95 &times; 10<sup>7</sup></td>
+               <td>37.70</td>
+               <td>5.34</td>
+            </tr>
+            <tr>
+               <td rowspan="1">CSI</td>
+               <td>42.22</td>
+               <td>0.51</td>
+               <td>53.03</td>
+               <td>26.57</td>
+               <td>41.64</td>
+               <td>0.51</td>
+               <td>460.30</td>
+               <td>493.04</td>
+               <td>351.39</td>
+               <td>9.29</td>
+               <td>1.38</td>
+            </tr>
+            <tr>
+               <td rowspan="1">GP (Linear)</td>
+               <td>284.50</td>
+               <td>3.27</td>
+               <td>188.69</td>
+               <td>8.43</td>
+               <td>86.02</td>
+               <td>3.39</td>
+               <td>1.95 &times; 10<sup>3</sup></td>
+               <td>7.17</td>
+               <td>989.64</td>
+               <td>9.97</td>
+               <td>1.39</td>
+            </tr>
+            <tr>
+               <td rowspan="1">GP (Periodic)</td>
+               <td><b>3.17</b></td>
+               <td>0.12</td>
+               <td>4.27</td>
+               <td><b>0.12</b></td>
+               <td><b>0.13</b></td>
+               <td>0.12</td>
+               <td>4.29</td>
+               <td>0.13</td>
+               <td>0.13</td>
+               <td>2.07</td>
+               <td>0.31</td>
+            </tr>
+            <tr>
+               <td rowspan="1">GP (Brownian)</td>
+               <td>4.53</td>
+               <td>0.08</td>
+               <td>2.29</td>
+               <td><b>0.12</b></td>
+               <td><b>0.13</b></td>
+               <td>0.08</td>
+               <td>2.30</td>
+               <td>0.13</td>
+               <td>0.13</td>
+               <td>2.17</td>
+               <td>0.34</td>
+            </tr>
+            <tr>
+               <td>GP (Exponential)</td>
+               <td>5.20</td>
+               <td><b>0.07</b></td>
+               <td>1.59</td>
+               <td><b>0.12</b></td>
+               <td><b>0.13</b></td>
+               <td><b>0.07</b></td>
+               <td>1.60</td>
+               <td>0.13</td>
+               <td>0.13</td>
+               <td>2.52</td>
+               <td>0.40</td>
+            </tr>
+            <tr>
+               <td>GP (Matern 3/2 / 5/2)</td>
+               <td>3.99 / 4.31</td>
+               <td>0.08 / 0.08</td>
+               <td>1.60 / <b>1.56</b></td>
+               <td>0.27 / 0.24</td>
+               <td>0.31 / 0.47</td>
+               <td>0.08 / 0.08</td>
+               <td>1.58 / 1.63</td>
+               <td>0.26 / 0.24</td>
+               <td>0.33 / 0.51</td>
+               <td>2.23 / 2.10</td>
+               <td>0.35 / 0.33</td>
+            </tr>
+            <tr>
+               <td>GP (RBF / RQ)</td>
+               <td>3.68 / 5.02</td>
+               <td>0.09 / <b>0.07</b></td>
+               <td>1.69 / 1.79</td>
+               <td>0.23 / <b>0.12</b></td>
+               <td>0.79 / <b>0.13</b></td>
+               <td>0.09 / <b>0.07</b></td>
+               <td>2.01 / 1.81</td>
+               <td>0.22 / 0.13</td>
+               <td>1.15 / 0.13</td>
+               <td>1.94 / 2.47</td>
+               <td>0.30 / 0.39</td>
+            </tr>
+            <!-- 5 -->
+            <tr style="background: #ffffff;">
+               <td colspan="13"></td>
+            </tr>
+            <tr>
+               <td rowspan="8">5</td>
+               <td>Noisy (σ = 1)</td>
+               <td>1.92 &times; 10<sup>3</sup></td>
+               <td>2.28</td>
+               <td>579.03</td>
+               <td>271.80</td>
+               <td>100.00</td>
+               <td>2.21</td>
+               <td>1.90 &times; 10<sup>8</sup></td>
+               <td>71.93</td>
+               <td>5.95 &times; 10<sup>7</sup></td>
+               <td>36.12</td>
+               <td>5.12</td>
+            </tr>
+            <tr>
+               <td rowspan="1">CSI</td>
+               <td>67.00</td>
+               <td>1.05</td>
+               <td>122.38</td>
+               <td>51.05</td>
+               <td>77.09</td>
+               <td>1.04</td>
+               <td>2.50 &times; 10<sup>3</sup></td>
+               <td>2420.67</td>
+               <td>2.14 &times; 10<sup>3</sup></td>
+               <td>11.63</td>
+               <td>1.72</td>
+            </tr>
+            <tr>
+               <td rowspan="1">GP (Linear)</td>
+               <td>221.66</td>
+               <td>3.31</td>
+               <td>186.92</td>
+               <td>7.29</td>
+               <td>81.63</td>
+               <td>3.44</td>
+               <td>1.76 &times; 10<sup>3</sup></td>
+               <td>6.21</td>
+               <td>799.91</td>
+               <td>6.57</td>
+               <td>0.92</td>
+            </tr>
+            <tr>
+               <td rowspan="1">GP (Periodic)</td>
+               <td><b>2.66</b></td>
+               <td>0.13</td>
+               <td>4.29</td>
+               <td><b>0.14</b></td>
+               <td><b>0.16</b></td>
+               <td>0.13</td>
+               <td>4.30</td>
+               <td><b>0.15</b></td>
+               <td><b>0.15</b></td>
+               <td><b>1.73</b></td>
+               <td><b>0.27</b></td>
+            </tr>
+            <tr>
+               <td rowspan="1">GP (Brownian)</td>
+               <td>4.81</td>
+               <td>0.11</td>
+               <td>2.29</td>
+               <td><b>0.14</b></td>
+               <td><b>0.16</b></td>
+               <td>0.11</td>
+               <td>2.29</td>
+               <td><b>0.15</b></td>
+               <td><b>0.15</b></td>
+               <td>2.25</td>
+               <td>0.35</td>
+            </tr>
+            <tr>
+               <td>GP (Exponential)</td>
+               <td>5.27</td>
+               <td>0.10</td>
+               <td>1.73</td>
+               <td><b>0.14</b></td>
+               <td><b>0.16</b></td>
+               <td>0.10</td>
+               <td>1.73</td>
+               <td><b>0.15</b></td>
+               <td><b>0.15</b></td>
+               <td>2.37</td>
+               <td>0.37</td>
+            </tr>
+            <tr>
+               <td>GP (Matern 3/2 / 5/2)</td>
+               <td>4.09 / 4.25</td>
+               <td>0.12 / 0.13</td>
+               <td>2.30 / 2.52</td>
+               <td>0.40 / 0.44</td>
+               <td>0.60 / 1.17</td>
+               <td>0.12 / 0.13</td>
+               <td>2.34 / 2.89</td>
+               <td>0.39 / 0.41</td>
+               <td>0.63 / 1.41</td>
+               <td>2.22 / 2.05</td>
+               <td>0.35 / 0.32</td>
+            </tr>
+            <tr>
+               <td>GP (RBF / RQ)</td>
+               <td>3.63 / 5.13</td>
+               <td>0.15 / <b>0.09</b></td>
+               <td>3.69 / <b>2.09</b></td>
+               <td>0.69 / <b>0.14</b></td>
+               <td>2.55 / <b>0.16</b></td>
+               <td>0.15 / <b>0.09</b></td>
+               <td>18.89 / <b>2.11</b></td>
+               <td>46.17 / <b>0.15</b></td>
+               <td>5.90 / <b>0.15</b></td>
+               <td>1.95 / 2.36</td>
+               <td>0.30 / 0.37</td>
+            </tr>
+            <!-- 7 -->
+            <tr style="background: #ffffff;">
+               <td colspan="13"></td>
+            </tr>
+            <tr>
+               <td rowspan="8">7</td>
+               <td>Noisy (&#963; =1)</td>
+               <td>1.95 &times; 10<sup>3</sup></td>
+               <td>2.34</td>
+               <td>588.58</td>
+               <td>274.02</td>
+               <td>100.00</td>
+               <td>2.27</td>
+               <td>1.92 &times; 10<sup>8</sup></td>
+               <td>72.09</td>
+               <td>5.95 &times; 10<sup>7</sup></td>
+               <td>35.63</td>
+               <td>5.05</td>
+            </tr>
+            <tr>
+               <td rowspan="1">CSI</td>
+               <td>89.49</td>
+               <td>1.83</td>
+               <td>215.36</td>
+               <td>77.17</td>
+               <td>113.20</td>
+               <td>1.83</td>
+               <td>6.17 &times; 10<sup>3</sup></td>
+               <td>6.33 &times; 10<sup>3</sup></td>
+               <td>4.08 &times; 10<sup>3</sup></td>
+               <td>13.57</td>
+               <td>2.00</td>
+            </tr>
+            <tr>
+               <td rowspan="1">GP (Linear)</td>
+               <td>183.19</td>
+               <td>3.44</td>
+               <td>188.04</td>
+               <td>6.14</td>
+               <td>77.68</td>
+               <td>3.59</td>
+               <td><b>1.68 &times; 10<sup>3</sup></b></td>
+               <td>5.26</td>
+               <td>694.97</td>
+               <td>4.82</td>
+               <td>0.67</td>
+            </tr>
+            <tr>
+               <td rowspan="1">GP (Periodic)</td>
+               <td><b>2.83</b></td>
+               <td>0.15</td>
+               <td>4.26</td>
+               <td><b>0.16</b></td>
+               <td>0.14</td>
+               <td>0.15</td>
+               <td>4.26</td>
+               <td><b>0.17</b></td>
+               <td>0.14</td>
+               <td><b>1.71</b></td>
+               <td><b>0.26</b></td>
+            </tr>
+            <tr>
+               <td rowspan="1">GP (Brownian)</td>
+               <td>5.03</td>
+               <td>0.12</td>
+               <td>2.30</td>
+               <td><b>0.16</b></td>
+               <td><b>0.13</b></td>
+               <td><b>0.12</b></td>
+               <td>2.30</td>
+               <td><b>0.17</b></td>
+               <td>0.13</td>
+               <td>2.25</td>
+               <td>0.35</td>
+            </tr>
+            <tr>
+               <td>GP (Exponential)</td>
+               <td>5.36</td>
+               <td>0.12</td>
+               <td><b>1.85</b></td>
+               <td><b>0.16</b></td>
+               <td>0.13</td>
+               <td><b>0.12</b></td>
+               <td>1.84</td>
+               <td><b>0.17</b></td>
+               <td><b>0.13</b></td>
+               <td>2.31</td>
+               <td>0.36</td>
+            </tr>
+            <tr>
+               <td>GP (Matern 3/2 / 5/2)</td>
+               <td>4.27 / 4.23</td>
+               <td>0.17 / 0.19</td>
+               <td>3.20 / 4.15</td>
+               <td>0.49 / 0.57</td>
+               <td>1.09 / 2.41</td>
+               <td>0.17 / 0.19</td>
+               <td>3.46 / 5.63</td>
+               <td>0.47 / 0.54</td>
+               <td>1.22 / 3.24</td>
+               <td>2.20 / 2.02</td>
+               <td>0.34 /0.31</td>
+            </tr>
+            <tr>
+               <td>GP (RBF / RQ)</td>
+               <td>3.60 / 5.24</td>
+               <td>0.25 / <b>0.11</b></td>
+               <td>7.78 / 2.33</td>
+               <td>1.42 / <b>0.16</b></td>
+               <td>6.25 / <b>0.13</b></td>
+               <td>0.25 / <b>0.11</b></td>
+               <td>39.55 / 2.34</td>
+               <td>34.20 / <b>0.17</b></td>
+               <td>28.37 / <b>0.12</b></td>
+               <td>2.03 / 2.30</td>
+               <td>0.32 / 0.36</td>
+            </tr>
+            <!-- 20% -->
+            <!-- 1s -->
+            <tr>
+               <td rowspan="35">20%</td>
+               <td rowspan="8">1</td>
+               <td>Noisy (σ = 1)</td>
+               <td>2.73 &times; 10<sup>3</sup></td>
+               <td>4.27</td>
+               <td>835.17</td>
+               <td>297.89</td>
+               <td>100.00</td>
+               <td>4.05</td>
+               <td>2.60 &times; 10<sup>8</sup></td>
+               <td>73.87</td>
+               <td>5.95 &times; 10<sup>7</sup></td>
+               <td>87.92</td>
+               <td>12.44</td>
+            </tr>
+            <tr>
+               <td rowspan="1">CSI</td>
+               <td>71.43</td>
+               <td>0.37</td>
+               <td>48.50</td>
+               <td>27.14</td>
+               <td>40.22</td>
+               <td>0.37</td>
+               <td>816.89</td>
+               <td>374.99</td>
+               <td>974.98</td>
+               <td>16.43</td>
+               <td>2.43</td>
+            </tr>
+            <tr>
+               <td rowspan="1">GP (Linear)</td>
+               <td>668.99</td>
+               <td>6.30</td>
+               <td>287.65</td>
+               <td>12.16</td>
+               <td>93.85</td>
+               <td>6.77</td>
+               <td>3.30 &times; 10<sup>3</sup></td>
+               <td>10.14</td>
+               <td>1.78 &times; 10<sup>3</sup></td>
+               <td>45.34</td>
+               <td>6.38</td>
+            </tr>
+            <tr>
+               <td rowspan="1">GP (Periodic)</td>
+               <td>14.75</td>
+               <td>0.12</td>
+               <td>8.76</td>
+               <td><b>0.23</b></td>
+               <td>0.25</td>
+               <td>0.12</td>
+               <td>8.79</td>
+               <td><b>0.24</b></td>
+               <td>0.24</td>
+               <td>8.06</td>
+               <td>1.20</td>
+            </tr>
+            <tr>
+               <td>GP (Brownian)</td>
+               <td>7.63</td>
+               <td>0.07</td>
+               <td>4.32</td>
+               <td><b>0.23</b></td>
+               <td>0.25</td>
+               <td>0.07</td>
+               <td>4.29</td>
+               <td><b>0.24</b></td>
+               <td>0.24</td>
+               <td>3.67</td>
+               <td>0.57</td>
+            </tr>
+            <tr>
+               <td>GP (Exponential)</td>
+               <td>10.21</td>
+               <td><b>0.06</b></td>
+               <td>2.33</td>
+               <td><b>0.23</b></td>
+               <td>0.25</td>
+               <td><b>0.06</b></td>
+               <td>2.32</td>
+               <td><b>0.24</b></td>
+               <td>0.24</td>
+               <td>4.96</td>
+               <td>0.78</td>
+            </tr>
+            <tr>
+               <td>GP (Matern 3/2 / 5/2)</td>
+               <td>7.58 / 8.14</td>
+               <td>0.07 / <b>0.06</b></td>
+               <td><b>1.95</b> / 2.22</td>
+               <td>0.36 / 0.24</td>
+               <td>0.39 / 0.28</td>
+               <td>0.07 / <b>0.06</b></td>
+               <td><b>1.90</b> / 2.18</td>
+               <td>0.36 / 0.25</td>
+               <td>0.39 / 0.27</td>
+               <td>3.74 /3.74</td>
+               <td>0.58 / 0.58</td>
+            </tr>
+            <tr>
+               <td>GP (RBF / RQ)</td>
+               <td><b>6.26</b> / 9.68</td>
+               <td>0.07 / <b>0.06</b></td>
+               <td>2.26 / 2.47</td>
+               <td>0.26 / 0.24</td>
+               <td>0.40 / <b>0.24</b></td>
+               <td>0.07 / <b>0.06</b></td>
+               <td>2.24 / 2.47</td>
+               <td>0.26 / <b>0.24</b></td>
+               <td>0.41 / <b>0.23</b></td>
+               <td><b>3.08</b> / 4.71</td>
+               <td><b>0.48</b> / 0.73</td>
+            </tr>
+            <!-- 3 -->
+            <tr style="background: #ffffff;">
+               <td colspan="13"></td>
+            </tr>
+            <tr>
+               <td rowspan="8">3</td>
+               <td>Noisy (σ = 1)</td>
+               <td>2.73 &times; 10<sup>3</sup></td>
+               <td>4.29</td>
+               <td>839.02</td>
+               <td>298.27</td>
+               <td>100.00</td>
+               <td>4.06</td>
+               <td>2.61 &times; 10<sup>8</sup></td>
+               <td>73.91</td>
+               <td>5.95 &times; 10<sup>7</sup></td>
+               <td>73.52</td>
+               <td>10.41</td>
+            </tr>
+            <tr>
+               <td rowspan="1">CSI</td>
+               <td>131.73</td>
+               <td>1.17</td>
+               <td>168.27</td>
+               <td>70.27</td>
+               <td>102.11</td>
+               <td>1.17</td>
+               <td>3.40 &times; 10<sup>3</sup></td>
+               <td>2.61 &times; 10<sup>3</sup></td>
+               <td>3.23 &times; 10<sup>3</sup></td>
+               <td>21.34</td>
+               <td>3.15</td>
+            </tr>
+            <tr>
+               <td>GP (Linear)</td>
+               <td>426.74</td>
+               <td>6.48</td>
+               <td>288.08</td>
+               <td>10.64</td>
+               <td>91.46</td>
+               <td>6.98</td>
+               <td>3.02 &times; 10<sup>3</sup></td>
+               <td>8.94</td>
+               <td>1.41 &times; 10<sup>3</sup></td>
+               <td>18.91</td>
+               <td>2.63</td>
+            </tr>
+            <tr>
+               <td>GP (Periodic)</td>
+               <td><b>5.39</b></td>
+               <td>0.17</td>
+               <td>8.71</td>
+               <td><b>0.29</b></td>
+               <td><b>0.28</b></td>
+               <td>0.17</td>
+               <td>8.73</td>
+               <td><b>0.30</b></td>
+               <td><b>0.27</b></td>
+               <td><b>3.55</b></td>
+               <td><b>0.54</b></td>
+            </tr>
+            <tr>
+               <td>GP (Brownian)</td>
+               <td>9.24</td>
+               <td>0.12</td>
+               <td>4.63</td>
+               <td><b>0.29</b></td>
+               <td><b>0.28</b></td>
+               <td>0.12</td>
+               <td>4.62</td>
+               <td><b>0.30</b></td>
+               <td><b>0.27</b></td>
+               <td>4.27</td>
+               <td>0.67</td>
+            </tr>
+            <tr>
+               <td>GP (Exponential)</td>
+               <td>10.65</td>
+               <td>0.11</td>
+               <td>3.06</td>
+               <td><b>0.29</b></td>
+               <td><b>0.28</b></td>
+               <td>0.11</td>
+               <td>3.05</td>
+               <td><b>0.30</b></td>
+               <td><b>0.27</b></td>
+               <td>4.92</td>
+               <td>0.77</td>
+            </tr>
+            <tr>
+               <td>GP (Matern 3/2 / 5/2)</td>
+               <td>7.82 / 8.85</td>
+               <td>0.13 / 0.13</td>
+               <td>3.16 / <b>2.81</b></td>
+               <td>0.64 / 0.39</td>
+               <td>0.86 / 0.90</td>
+               <td>0.13 / 0.13</td>
+               <td>3.20 / <b>3.04</b></td>
+               <td>0.62 / 0.39</td>
+               <td>0.96 / 1.06</td>
+               <td>4.30 / 4.23</td>
+               <td>0.67 / 0.66</td>
+            </tr>
+            <tr>
+               <td>GP (RBF / RQ)</td>
+               <td>7.49 / 10.29</td>
+               <td>0.14 / <b>0.10</b></td>
+               <td>3.43 / 3.64</td>
+               <td>0.59 / <b>0.29</b></td>
+               <td>1.91 / <b>0.28</b></td>
+               <td>0.14 / <b>0.10</b></td>
+               <td>4.28 / 3.66</td>
+               <td>0.78 / <b>0.30</b></td>
+               <td>2.87 / <b>0.27</b></td>
+               <td>3.73 / 4.85</td>
+               <td>0.58 / 0.76</td>
+            </tr>
+            <!-- 5 -->
+            <tr style="background: #ffffff;">
+               <td colspan="13"></td>
+            </tr>
+            <tr>
+               <td rowspan="8">5</td>
+               <td>Noisy (&#963; =1)</td>
+               <td>2.74 &times; 10<sup>3</sup></td>
+               <td>4.33</td>
+               <td>843.24</td>
+               <td>299.02</td>
+               <td>100.00</td>
+               <td>4.11</td>
+               <td>2.63 &times; 10<sup>8</sup></td>
+               <td>73.95</td>
+               <td>5.95 &times; 10<sup>7</sup></td>
+               <td>70.14</td>
+               <td>9.94</td>
+            </tr>
+            <tr>
+               <td>CSI</td>
+               <td>202.83</td>
+               <td>2.52</td>
+               <td>348.26</td>
+               <td>126.43</td>
+               <td>175.11</td>
+               <td>3.30</td>
+               <td>5831.40</td>
+               <td>6970.53</td>
+               <td>4036.82</td>
+               <td>25.42</td>
+               <td>3.75</td>
+            </tr>
+            <tr>
+               <td>GP (Linear)</td>
+               <td>337.77</td>
+               <td>6.50</td>
+               <td>285.22</td>
+               <td>9.54</td>
+               <td>89.28</td>
+               <td>7.01</td>
+               <td>2841.35</td>
+               <td>8.06</td>
+               <td>1210.47</td>
+               <td>12.33</td>
+               <td>1.72</td>
+            </tr>
+            <tr>
+               <td>GP (Periodic)</td>
+               <td><b>4.74</b></td>
+               <td>0.20</td>
+               <td>8.68</td>
+               <td><b>0.34</b></td>
+               <td><b>0.32</b></td>
+               <td>0.20</td>
+               <td>8.71</td>
+               <td><b>0.36</b></td>
+               <td><b>0.31</b></td>
+               <td><b>3.12</b></td>
+               <td><b>0.48</b></td>
+            </tr>
+            <tr>
+               <td>GP (Brownian)</td>
+               <td>9.96</td>
+               <td>0.15</td>
+               <td>4.54</td>
+               <td><b>0.34</b></td>
+               <td><b>0.32</b></td>
+               <td>0.15</td>
+               <td>4.55</td>
+               <td><b>0.36</b></td>
+               <td><b>0.31</b></td>
+               <td>4.46</td>
+               <td>0.70</td>
+            </tr>
+            <tr>
+               <td>GP (Exponential)</td>
+               <td>10.93</td>
+               <td>0.15</td>
+               <td><b>3.21</b></td>
+               <td><b>0.34</b></td>
+               <td><b>0.32</b></td>
+               <td>0.15</td>
+               <td><b>3.22</b></td>
+               <td><b>0.36</b></td>
+               <td><b>0.31</b></td>
+               <td>4.71</td>
+               <td>0.74</td>
+            </tr>
+            <tr>
+               <td>GP (Matern 3/2 / 5/2)</td>
+               <td>7.95 / 8.86</td>
+               <td>0.20 / 0.20</td>
+               <td>4.94 / 4.53</td>
+               <td>0.93 / 0.75</td>
+               <td>1.67 / 2.06</td>
+               <td>0.20 / 0.20</td>
+               <td>5.29 / 5.73</td>
+               <td>0.89 / 0.72</td>
+               <td>1.90 / 2.83</td>
+               <td>4.33 / 4.09</td>
+               <td>0.68 / 0.64</td>
+            </tr>
+            <tr>
+               <td>GP (RBF / RQ)</td>
+               <td>7.33 / 10.64</td>
+               <td>0.25 / <b>0.14</b></td>
+               <td>7.49 / 4.22</td>
+               <td>1.42 / <b>0.34</b></td>
+               <td>5.20 / <b>0.32</b></td>
+               <td>0.25 / <b>0.14</b></td>
+               <td>68.87 / 4.25</td>
+               <td>35.43 / <b>0.36</b></td>
+               <td>87.52 / <b>0.31</b></td>
+               <td>3.66 / 4.68</td>
+               <td>0.57 / 0.73</td>
+            </tr>
+            <!-- 7 -->
+            <tr style="background: #ffffff;">
+               <td colspan="13"></td>
+            </tr>
+            <tr>
+               <td rowspan="8">7</td>
+               <td>Noisy (&#963; =1)</td>
+               <td>2.75 &times; 10<sup>3</sup></td>
+               <td>4.41</td>
+               <td>849.36</td>
+               <td>301.85</td>
+               <td>100.00</td>
+               <td>4.17</td>
+               <td>2.64 &times; 10<sup>8</sup></td>
+               <td>74.15</td>
+               <td>5.95 &times; 10<sup>7</sup></td>
+               <td>68.46</td>
+               <td>9.70</td>
+            </tr>
+            <tr>
+               <td>CSI</td>
+               <td>233.91</td>
+               <td>3.95</td>
+               <td>514.21</td>
+               <td>162.84</td>
+               <td>229.54</td>
+               <td>4.11</td>
+               <td>1.65 &times; 10<sup>4</sup></td>
+               <td>2.81 &times; 10<sup>4</sup></td>
+               <td>7.66 &times; 10<sup>3</sup></td>
+               <td>28.73</td>
+               <td>4.22</td>
+            </tr>
+            <tr>
+               <td>GP (Linear)</td>
+               <td>281.57</td>
+               <td>6.63</td>
+               <td>285.84</td>
+               <td>8.62</td>
+               <td>87.28</td>
+               <td>7.17</td>
+               <td>2.69 &times; 10<sup>3</sup></td>
+               <td>7.27</td>
+               <td>1.07 &times; 10<sup>3</sup></td>
+               <td>9.09</td>
+               <td>1.27</td>
+            </tr>
+            <tr>
+               <td>GP (Periodic)</td>
+               <td><b>5.33</b></td>
+               <td>0.21</td>
+               <td>8.62</td>
+               <td>0.34</td>
+               <td>0.35</td>
+               <td>0.21</td>
+               <td>8.67</td>
+               <td>0.35</td>
+               <td>0.34</td>
+               <td><b>3.07</b></td>
+               <td><b>0.48</b></td>
+            </tr>
+            <tr>
+               <td>GP (Brownian)</td>
+               <td>10.28</td>
+               <td>0.18</td>
+               <td>4.38</td>
+               <td><b>0.32</b></td>
+               <td><b>0.32</b></td>
+               <td>0.18</td>
+               <td>4.41</td>
+               <td><b>0.33</b></td>
+               <td><b>0.31</b></td>
+               <td>4.41</td>
+               <td>0.69</td>
+            </tr>
+            <tr>
+               <td>GP (Exponential)</td>
+               <td>10.97</td>
+               <td>0.18</td>
+               <td><b>3.25</b></td>
+               <td><b>0.32</b></td>
+               <td><b>0.32</b></td>
+               <td>0.18</td>
+               <td><b>3.26</b></td>
+               <td><b>0.33</b></td>
+               <td><b>0.31</b></td>
+               <td>4.54</td>
+               <td>0.71</td>
+            </tr>
+            <tr>
+               <td>GP (Matern 3/2 / 5/2)</td>
+               <td>8.25 / 8.65</td>
+               <td>0.28 / 0.31</td>
+               <td>7.01 / 7.67</td>
+               <td>1.19 / 1.11</td>
+               <td>2.66 / 3.90</td>
+               <td>0.28 / 0.31</td>
+               <td>8.07 / 11.73</td>
+               <td>1.12 / 1.04</td>
+               <td>3.16 / 6.24</td>
+               <td>4.24 / 3.90</td>
+               <td>0.67 / 0.61</td>
+            </tr>
+            <tr>
+               <td>GP (RBF / RQ)</td>
+               <td>7.06 / 10.73</td>
+               <td>0.42 / <b>0.16</b></td>
+               <td>16.54 / 4.58</td>
+               <td>2.54 / <b>0.32</b></td>
+               <td>11.55 / <b>0.32</b></td>
+               <td>0.43 / <b>0.16</b></td>
+               <td>299.53 / 4.63</td>
+               <td>423.35 / <b>0.33</b></td>
+               <td>225.36 / <b>0.31</b></td>
+               <td>3.72 / 4.51</td>
+               <td>0.58 / 0.71</td>
+            </tr>
+            <!-- 30% -->
+            <!-- 1s -->
+            <tr>
+               <td rowspan="35">30%</td>
+               <td rowspan="8">1</td>
+               <td>Noisy (σ = 1)</td>
+               <td>3.36 &times; 10<sup>3</sup></td>
+               <td>6.32</td>
+               <td>1.04 &times; 10<sup>3</sup></td>
+               <td>315.79</td>
+               <td>100.00</td>
+               <td>5.86</td>
+               <td>3.14 &times; 10<sup>8</sup></td>
+               <td>75.06</td>
+               <td>5.96 &times; 10<sup>7</sup></td>
+               <td>128.39</td>
+               <td>18.18</td>
+            </tr>
+            <tr>
+               <td rowspan="1">CSI</td>
+               <td>2.43 &times; 10<sup>4</sup></td>
+               <td>4.73</td>
+               <td>6.97 &times; 10<sup>3</sup></td>
+               <td>2.32 &times; 10<sup>3</sup></td>
+               <td>2.51 &times; 10<sup>3</sup></td>
+               <td>1.55</td>
+               <td>7.60 &times; 10<sup>3</sup></td>
+               <td>7.58 &times; 10<sup>3</sup></td>
+               <td>1.93 &times; 10<sup>3</sup></td>
+               <td>34.07</td>
+               <td>4.94</td>
+            </tr>
+            <tr>
+               <td rowspan="1">GP (Linear)</td>
+               <td>804.38</td>
+               <td>9.56</td>
+               <td>359.03</td>
+               <td>12.19</td>
+               <td>94.76</td>
+               <td>10.68</td>
+               <td>4.10 &times; 10<sup>3</sup></td>
+               <td>10.12</td>
+               <td>2.01 &times; 10<sup>3</sup></td>
+               <td>62.38</td>
+               <td>8.80</td>
+            </tr>
+            <tr>
+               <td rowspan="1">GP (Periodic)</td>
+               <td>19.21</td>
+               <td>0.17</td>
+               <td>13.53</td>
+               <td><b>0.41</b></td>
+               <td>0.37</td>
+               <td>0.17</td>
+               <td>13.58</td>
+               <td><b>0.42</b></td>
+               <td>0.36</td>
+               <td>10.93</td>
+               <td>1.63</td>
+            </tr>
+            <tr>
+               <td rowspan="1">GP (Brownian)</td>
+               <td>11.84</td>
+               <td>0.10</td>
+               <td>6.76</td>
+               <td><b>0.41</b></td>
+               <td>0.37</td>
+               <td>0.10</td>
+               <td>6.72</td>
+               <td><b>0.42</b></td>
+               <td>0.36</td>
+               <td>5.32</td>
+               <td>0.83</td>
+            </tr>
+            <tr>
+               <td>GP (Exponential)</td>
+               <td>15.97</td>
+               <td>0.09</td>
+               <td>3.62</td>
+               <td><b>0.41</b></td>
+               <td>0.37</td>
+               <td>0.09</td>
+               <td>3.60</td>
+               <td><b>0.42</b></td>
+               <td>0.36</td>
+               <td>7.38</td>
+               <td>1.15</td>
+            </tr>
+            <tr>
+               <td>GP (Matern 3/2 / 5/2)</td>
+               <td>11.64/12.47</td>
+               <td>0.10/0.09</td>
+               <td><b>2.96</b>/3.56</td>
+               <td>0.61/0.42</td>
+               <td>0.63/0.43</td>
+               <td>0.10/0.09</td>
+               <td><b>2.90</b>/3.49</td>
+               <td>0.61/0.43</td>
+               <td>0.64/0.43</td>
+               <td>5.59/5.57</td>
+               <td>0.87/0.86</td>
+            </tr>
+            <tr>
+               <td>GP (RBF / RQ)</td>
+               <td><b>9.76</b>/15.17</td>
+               <td>0.10/<b>0.08</b></td>
+               <td>3.59/4.01</td>
+               <td>0.50/<b>0.41</b></td>
+               <td>0.71/<b>0.36</b></td>
+               <td>0.10/<b>0.08</b></td>
+               <td>3.60/4.01</td>
+               <td>0.50/<b>0.42</b></td>
+               <td>0.77/<b>0.35</b></td>
+               <td><b>4.56</b>/6.95</td>
+               <td><b>0.70</b>/1.08</td>
+            </tr>
+            <!-- 3 -->
+            <tr style="background: #ffffff;">
+               <td colspan="13"></td>
+            </tr>
+            <tr>
+               <td rowspan="8">3</td>
+               <td>Noisy (&#963; =1)</td>
+               <td>3.37 &times; 10<sup>3</sup></td>
+               <td>6.34</td>
+               <td>1.05 &times; 10<sup>3</sup></td>
+               <td>316.91</td>
+               <td>100.00</td>
+               <td>5.87</td>
+               <td>3.15 &times; 10<sup>8</sup></td>
+               <td>75.14</td>
+               <td>5.95 &times; 10<sup>7</sup></td>
+               <td>109.01</td>
+               <td>15.43</td>
+            </tr>
+            <tr>
+               <td rowspan="1">CSI</td>
+               <td>532.42</td>
+               <td>3.43</td>
+               <td>589.67</td>
+               <td>197.31</td>
+               <td>345.50</td>
+               <td>4.35</td>
+               <td>8.55 &times; 10<sup>3</sup></td>
+               <td>5.69 &times; 10<sup>3</sup></td>
+               <td>7.58 &times; 10<sup>3</sup></td>
+               <td>36.82</td>
+               <td>5.38</td>
+            </tr>
+            <tr>
+               <td rowspan="1">GP (Linear)</td>
+               <td>530.13</td>
+               <td>9.75</td>
+               <td>359.09</td>
+               <td>11.09</td>
+               <td>93.27</td>
+               <td>10.92</td>
+               <td>3.85 &times; 10<sup>3</sup></td>
+               <td>9.27</td>
+               <td>1.68 &times; 10<sup>3</sup></td>
+               <td>27.06</td>
+               <td>3.77</td>
+            </tr>
+            <tr>
+               <td rowspan="1">GP (Periodic)</td>
+               <td><b>7.43</b></td>
+               <td>0.22</td>
+               <td>13.47</td>
+               <td><b>0.49</b></td>
+               <td>0.49</td>
+               <td>0.22</td>
+               <td>13.54</td>
+               <td><b>0.50</b></td>
+               <td>0.47</td>
+               <td><b>5.09</b></td>
+               <td><b>0.78</b></td>
+            </tr>
+            <tr>
+               <td rowspan="1">GP (Brownian)</td>
+               <td>14.34</td>
+               <td>0.15</td>
+               <td>7.10</td>
+               <td><b>0.49</b></td>
+               <td>0.49</td>
+               <td>0.15</td>
+               <td>7.11</td>
+               <td><b>0.50</b></td>
+               <td>0.47</td>
+               <td>6.35</td>
+               <td>1.00</td>
+            </tr>
+            <tr>
+               <td>GP (Exponential)</td>
+               <td>16.60</td>
+               <td>0.14</td>
+               <td><b>4.60</b></td>
+               <td><b>0.49</b></td>
+               <td>0.49</td>
+               <td>0.14</td>
+               <td>4.61</td>
+               <td><b>0.50</b></td>
+               <td>0.47</td>
+               <td>7.35</td>
+               <td>1.15</td>
+            </tr>
+            <tr>
+               <td>GP (Matern 3/2 / 5/2)</td>
+               <td>12.42 / 13.81</td>
+               <td>0.18 / 0.17</td>
+               <td>4.79 / <b>4.10</b></td>
+               <td>1.02 / 0.67</td>
+               <td>1.42 / 1.22</td>
+               <td>0.18 / 0.17</td>
+               <td>4.93 / <b>4.35</b></td>
+               <td>0.99 / 0.66</td>
+               <td>1.60 / 1.44</td>
+               <td>6.34 / 6.33</td>
+               <td>0.99 / 0.99</td>
+            </tr>
+            <tr>
+               <td>GP (RBF / RQ)</td>
+               <td>11.57 / 16.05</td>
+               <td>0.20 / <b>0.13</b></td>
+               <td>5.62 / 5.75</td>
+               <td>1.16 / 0.49</td>
+               <td>3.23 / <b>0.48</b></td>
+               <td>0.20 / <b>0.13</b></td>
+               <td>17.89 / 5.81</td>
+               <td>16.54 / <b>0.50</b></td>
+               <td>15.87 / <b>0.46</b></td>
+               <td>5.49 / 7.23</td>
+               <td>0.86 / 1.13</td>
+            </tr>
+            <!-- 5 -->
+            <tr style="background: #ffffff;">
+               <td colspan="13"></td>
+            </tr>
+            <tr>
+               <td rowspan="8">5</td>
+               <td>Noisy (&#963; =1)</td>
+               <td>3.36 &times; 10<sup>3</sup></td>
+               <td>6.49</td>
+               <td>1.05 &times; 10<sup>3</sup></td>
+               <td>315.81</td>
+               <td>100.00</td>
+               <td>6.01</td>
+               <td>3.16 &times; 10<sup>8</sup></td>
+               <td>75.02</td>
+               <td>5.95 &times; 10<sup>7</sup></td>
+               <td>103.79</td>
+               <td>14.69</td>
+            </tr>
+            <tr>
+               <td rowspan="1">CSI</td>
+               <td>489.79</td>
+               <td>5.17</td>
+               <td>781.71</td>
+               <td>262.62</td>
+               <td>362.43</td>
+               <td>5.88</td>
+               <td>1.08 &times; 10<sup>4</sup></td>
+               <td>9.20 &times; 10<sup>3</sup></td>
+               <td>8.87 &times; 10<sup>3</sup></td>
+               <td>41.48</td>
+               <td>6.08</td>
+            </tr>
+            <tr>
+               <td rowspan="1">GP (Linear)</td>
+               <td>426.60</td>
+               <td>9.84</td>
+               <td>357.19</td>
+               <td>10.31</td>
+               <td>92.14</td>
+               <td>11.05</td>
+               <td>3.65 &times; 10<sup>3</sup></td>
+               <td>8.66</td>
+               <td>1.50 &times; 10<sup>3</sup></td>
+               <td>17.78</td>
+               <td>2.48</td>
+            </tr>
+            <tr>
+               <td rowspan="1">GP (Periodic)</td>
+               <td><b>7.00</b></td>
+               <td>0.25</td>
+               <td>13.31</td>
+               <td><b>0.52</b></td>
+               <td><b>0.48</b></td>
+               <td>0.25</td>
+               <td>13.38</td>
+               <td><b>0.54</b></td>
+               <td>0.47</td>
+               <td><b>4.45</b></td>
+               <td><b>0.69</b></td>
+            </tr>
+            <tr>
+               <td rowspan="1">GP (Brownian)</td>
+               <td>15.40</td>
+               <td>0.20</td>
+               <td>6.89</td>
+               <td><b>0.52</b></td>
+               <td><b>0.48</b></td>
+               <td>0.20</td>
+               <td>6.92</td>
+               <td><b>0.54</b></td>
+               <td><b>0.46</b></td>
+               <td>6.72</td>
+               <td>1.05</td>
+            </tr>
+            <tr>
+               <td>GP (Exponential)</td>
+               <td>16.93</td>
+               <td>0.19</td>
+               <td><b>4.72</b></td>
+               <td><b>0.52</b></td>
+               <td><b>0.48</b></td>
+               <td>0.19</td>
+               <td><b>4.76</b></td>
+               <td><b>0.54</b></td>
+               <td><b>0.46</b></td>
+               <td>7.13</td>
+               <td>1.12</td>
+            </tr>
+            <tr>
+               <td>GP (Matern 3/2 / 5/2)</td>
+               <td>12.26 / 13.87</td>
+               <td>0.27 / 0.26</td>
+               <td>7.75 / 6.25</td>
+               <td>1.46 / 1.03</td>
+               <td>2.64 / 2.50</td>
+               <td>0.27 / 0.26</td>
+               <td>8.43 / 7.32</td>
+               <td>1.39 / 0.99</td>
+               <td>3.01 / 3.10</td>
+               <td>6.41 / 6.35</td>
+               <td>1.01 / 0.99</td>
+            </tr>
+            <tr>
+               <td>GP (RBF / RQ)</td>
+               <td>11.35 / 16.49</td>
+               <td>0.35 / <b>0.18</b></td>
+               <td>12.72 / 6.55</td>
+               <td>2.35 / <b>0.52</b></td>
+               <td>7.99 / <b>0.48</b></td>
+               <td>0.35 / <b>0.18</b></td>
+               <td>54.66 / 6.62</td>
+               <td>63.16 / <b>0.54</b></td>
+               <td>45.08 / <b>0.46</b></td>
+               <td>5.56 / 7.08</td>
+               <td>0.87 / 1.11</td>
+            </tr>
+            <!-- 7 -->
+            <tr style="background: #ffffff;">
+               <td colspan="13"></td>
+            </tr>
+            <tr>
+               <td rowspan="8">7</td>
+               <td>Noisy (σ = 1)</td>
+               <td>3.37 &times; 10<sup>3</sup></td>
+               <td>6.44</td>
+               <td>1.05 &times; 10<sup>3</sup></td>
+               <td>316.27</td>
+               <td>100.00</td>
+               <td>5.97</td>
+               <td>3.17 &times; 10<sup>8</sup></td>
+               <td>75.08</td>
+               <td>5.95 &times; 10<sup>7</sup></td>
+               <td>101.21</td>
+               <td>14.34</td>
+            </tr>
+            <tr>
+               <td rowspan="1">CSI</td>
+               <td>673.39</td>
+               <td>8.41</td>
+               <td>1.25 &times; 10<sup>3</sup></td>
+               <td>368.96</td>
+               <td>491.29</td>
+               <td>10.31</td>
+               <td>2.99 &times; 10<sup>4</sup></td>
+               <td>5.76 &times; 10<sup>4</sup></td>
+               <td>1.23 &times; 10<sup>4</sup></td>
+               <td>46.35</td>
+               <td>6.78</td>
+            </tr>
+            <tr>
+               <td rowspan="1">GP (Linear)</td>
+               <td>357.99</td>
+               <td>9.97</td>
+               <td>356.36</td>
+               <td>9.48</td>
+               <td>90.83</td>
+               <td>11.22</td>
+               <td>3.48 &times; 10<sup>3</sup></td>
+               <td>7.97</td>
+               <td>1.35 &times; 10<sup>3</sup></td>
+               <td>13.00</td>
+               <td>1.82</td>
+            </tr>
+            <tr>
+               <td rowspan="1">GP (Periodic)</td>
+               <td><b>8.15</b></td>
+               <td>0.27</td>
+               <td>13.22</td>
+               <td>0.57</td>
+               <td>0.58</td>
+               <td>0.27</td>
+               <td>13.31</td>
+               <td>0.59</td>
+               <td>0.59</td>
+               <td><b>4.34</b></td>
+               <td><b>0.68</b></td>
+            </tr>
+            <tr>
+               <td rowspan="1">GP (Brownian)</td>
+               <td>16.02</td>
+               <td>0.23</td>
+               <td>6.71</td>
+               <td><b>0.55</b></td>
+               <td><b>0.56</b></td>
+               <td>0.23</td>
+               <td>6.76</td>
+               <td>0.58</td>
+               <td>0.54</td>
+               <td>6.69</td>
+               <td>1.05</td>
+            </tr>
+            <tr>
+               <td>GP (Exponential)</td>
+               <td>17.13</td>
+               <td>0.23</td>
+               <td><b>4.75</b></td>
+               <td><b>0.55</b></td>
+               <td><b>0.56</b></td>
+               <td>0.23</td>
+               <td><b>4.80</b></td>
+               <td>0.58</td>
+               <td>0.54</td>
+               <td>6.89</td>
+               <td>1.08</td>
+            </tr>
+            <tr>
+               <td>GP (Matern 3/2 / 5/2)</td>
+               <td>12.33 / 13.65</td>
+               <td>0.39 / 0.38</td>
+               <td>12.13 / 10.75</td>
+               <td>1.93 / 1.53</td>
+               <td>4.44 / 4.83</td>
+               <td>0.39 / 0.38</td>
+               <td>14.49 / 16.38</td>
+               <td>1.80 / 1.45</td>
+               <td>5.44 / 8.54</td>
+               <td>6.33 / 6.02</td>
+               <td>0.99 / 0.94</td>
+            </tr>
+            <tr>
+               <td>GP (RBF / RQ)</td>
+               <td>11.00 / 16.75</td>
+               <td>0.60 / <b>0.21</b></td>
+               <td>25.82 / 7.12</td>
+               <td>3.62 / <b>0.55</b></td>
+               <td>16.44 / <b>0.56</b></td>
+               <td>0.61 / <b>0.21</b></td>
+               <td>457.36 / 7.23</td>
+               <td>704.64 / <b>0.57</b></td>
+               <td>237.38 / <b>0.53</b></td>
+               <td>5.44 / 6.85</td>
+               <td>0.85 / 1.07</td>
+            </tr>
+         </tbody>
+      </table>
+</html>
